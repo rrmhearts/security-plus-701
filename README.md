@@ -76,6 +76,38 @@ Common network services use standard ports assigned through the Service Name and
 * 5432 (TCP): PostgreSQL — default database port
 
 
+For the Security+ exam, CompTIA tests ports primarily by asking you to identify secure alternatives to insecure protocols, or by asking which port you need to block or allow on a firewall configuration.
+
+Here are the absolute must-know ports, grouped exactly how they will test you on them.
+
+### The Secure vs. Insecure Pairs
+
+The exam will frequently give you a scenario where a company is using an insecure protocol and ask you which port should be opened to replace it with the secure version.
+
+| Insecure Protocol | Insecure Port | Secure Alternative | Secure Port | Exam Context |
+| --- | --- | --- | --- | --- |
+| **Telnet** | 23 | **SSH** | 22 | Always replace Telnet with SSH for remote command-line access. |
+| **HTTP** | 80 | **HTTPS** | 443 | HTTPS uses TLS (SSL is deprecated). |
+| **FTP** | 20, 21 | **SFTP** | 22 | SFTP runs over SSH. *(Note: FTPS uses ports 989/990 but SFTP is tested more often).* |
+| **LDAP** | 389 | **LDAPS** | 636 | Used for querying Active Directory. LDAPS adds SSL/TLS encryption. |
+| **IMAP** | 143 | **IMAPS** | 993 | IMAP keeps email on the server; IMAPS encrypts that connection. |
+| **POP3** | 110 | **POP3S** | 995 | POP3 downloads email to the client; POP3S encrypts that connection. |
+
+## Highly Tested Infrastructure Ports
+
+You must know these to interpret firewall Access Control Lists (ACLs) and identify network attacks.
+
+| Protocol | Port | UDP/TCP | Why CompTIA Tests It |
+| --- | --- | --- | --- |
+| **DNS** | 53 | TCP / UDP | Used in DNS poisoning and DNS amplification (DDoS) attacks. |
+| **DHCP** | 67, 68 | UDP | Port 67 is the server, 68 is the client. Associated with DHCP spoofing and starvation attacks. |
+| **TFTP** | 69 | UDP | Trivial FTP. Requires no authentication. If you see this open on an exam firewall log, it is a massive security risk. |
+| **NTP** | 123 | UDP | Network Time Protocol. Critical for cryptography and digital certificates (if time is out of sync, certificates fail). |
+| **SNMP** | 161, 162 | UDP | Used to monitor network devices. SNMPv1 and v2 are insecure; you must use **SNMPv3** for secure authentication and encryption. |
+| **SMB** | 445 | TCP | Server Message Block (Windows file sharing). This is the primary vector for ransomware lateral movement (like WannaCry). |
+| **RDP** | 3389 | TCP | Remote Desktop Protocol. A massive target for brute-force attacks; should never be exposed directly to the open internet. |
+| **SMTP** | 25 | TCP | Unencrypted email routing. Secure mail submission typically uses port 587. |
+
 ## Forensics: Order of Volatility
 
 When collecting evidence, always collect the most volatile data first before it is lost or overwritten.
