@@ -35,45 +35,45 @@ Preparation, Detection, Analysis, Containment, Eradication, Recovery, Lessons Le
 
 Common network services use standard ports assigned through the Service Name and Transport Protocol Port Number Registry (IANA), split into well-known (0–1023), registered (1024–49151), and dynamic/private (49152–65535) ranges.
 
-File Transfer \& Remote Access
+### File Transfer \& Remote Access
 
-• 20 (TCP/UDP): FTP Data — file transfer data channel
-• 21 (TCP): FTP Control — file transfer commands and authentication
-• 22 (TCP): SSH / SCP / SFTP — encrypted remote login and file transfer
-• 23 (TCP): Telnet — unencrypted remote terminal access
-• 69 (UDP): TFTP — lightweight, unauthenticated file transfer
-• 445 (TCP): SMB — Windows file and printer sharing
-• 3389 (TCP/UDP): RDP — Remote Desktop Protocol
-• 5900 (TCP): VNC — remote desktop sharing
+* 20 (TCP/UDP): FTP Data — file transfer data channel
+* 21 (TCP): FTP Control — file transfer commands and authentication
+* 22 (TCP): SSH / SCP / SFTP — encrypted remote login and file transfer
+* 23 (TCP): Telnet — unencrypted remote terminal access
+* 69 (UDP): TFTP — lightweight, unauthenticated file transfer
+* 445 (TCP): SMB — Windows file and printer sharing
+* 3389 (TCP/UDP): RDP — Remote Desktop Protocol
+* 5900 (TCP): VNC — remote desktop sharing
 
-Web \& Network Infrastructure
+### Web \& Network Infrastructure
 
-• 53 (TCP/UDP): DNS — domain name resolution
-• 67 / 68 (UDP): DHCP — automatic IP address assignment (67 server, 68 client)
-• 80 (TCP): HTTP — unencrypted web traffic
-• 123 (UDP): NTP — Network Time Protocol clock synchronization
-• 161 / 162 (UDP): SNMP — network device monitoring and traps
-• 179 (TCP): BGP — Border Gateway Protocol routing
-• 443 (TCP/UDP): HTTPS — encrypted web traffic (TLS; UDP used for HTTP/3 / QUIC)
-• 8080 / 8443 (TCP): Alternate HTTP / HTTPS — proxies, development servers, and management panels
+* 53 (TCP/UDP): DNS — domain name resolution
+* 67 / 68 (UDP): DHCP — automatic IP address assignment (67 server, 68 client)
+* 80 (TCP): HTTP — unencrypted web traffic
+* 123 (UDP): NTP — Network Time Protocol clock synchronization
+* 161 / 162 (UDP): SNMP — network device monitoring and traps
+* 179 (TCP): BGP — Border Gateway Protocol routing
+* 443 (TCP/UDP): HTTPS — encrypted web traffic (TLS; UDP used for HTTP/3 / QUIC)
+* 8080 / 8443 (TCP): Alternate HTTP / HTTPS — proxies, development servers, and management panels
 
-Email
+### Email
 
-• 25 (TCP): SMTP — mail transfer between servers
-• 110 (TCP): POP3 — unencrypted email retrieval
-• 143 (TCP): IMAP — unencrypted mailbox access
-• 465 / 587 (TCP): SMTPS / Submission — secure email sending
-• 993 (TCP): IMAPS — encrypted IMAP
-• 995 (TCP): POP3S — encrypted POP3
+* 25 (TCP): SMTP — mail transfer between servers
+* 110 (TCP): POP3 — unencrypted email retrieval
+* 143 (TCP): IMAP — unencrypted mailbox access
+* 465 / 587 (TCP): SMTPS / Submission — secure email sending
+* 993 (TCP): IMAPS — encrypted IMAP
+* 995 (TCP): POP3S — encrypted POP3
 
-Directory, Auth \& Databases
+### Directory, Auth \& Databases
 
-• 88 (TCP/UDP): Kerberos — network authentication
-• 135 (TCP): MS RPC Endpoint Mapper — Windows remote procedure calls
-• 389 / 636 (TCP/UDP): LDAP / LDAPS — directory services (636 over SSL/TLS)
-• 1433 (TCP): Microsoft SQL Server — default database port
-• 3306 (TCP): MySQL — default database port
-• 5432 (TCP): PostgreSQL — default database port
+* 88 (TCP/UDP): Kerberos — network authentication
+* 135 (TCP): MS RPC Endpoint Mapper — Windows remote procedure calls
+* 389 / 636 (TCP/UDP): LDAP / LDAPS — directory services (636 over SSL/TLS)
+* 1433 (TCP): Microsoft SQL Server — default database port
+* 3306 (TCP): MySQL — default database port
+* 5432 (TCP): PostgreSQL — default database port
 
 For full technical port tables and protocol assignments, see the List of TCP and UDP port numbers or Microsoft's Service overview and network port requirements guide.
 
